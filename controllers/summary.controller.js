@@ -3,7 +3,7 @@ import Transactions from '../models/Transaction.model.js';
 export const getTransactionSummary = async (req, res) => {
 	try {
 		const pipeline = [];
-		const filters = {};
+		const filters = req.body;
 
 		if (filters.startDate && filters.endDate) {
 			pipeline.push({
