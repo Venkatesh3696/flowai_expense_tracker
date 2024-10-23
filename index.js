@@ -18,6 +18,10 @@ app.use('/transactions', transactionsRouter);
 
 app.use('/summary', getTransactionSummary);
 
+app.get('/', (req, res) => {
+	res.send({ message: 'hello! welcome to expense tracker' });
+});
+
 app.listen(PORT, () => {
 	console.log(`app is listening ay port ${PORT}`);
 });
